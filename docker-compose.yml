@@ -1,0 +1,68 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-examdb}
+      POSTGRES_USER: ${POSTGRES_USER:-examuser}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-local_dev_only_change_me}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 15
+    networks: [exam-net]
+    restart: unless-stopped
+
+  quiz-service:
+    build: ./services/quiz
+    environment:
+      EXAM_DEFAULT_LIMIT: ${EXAM_DEFAULT_LIMIT:-20}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
+    expose: ["8001"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8001/health', timeout=2)"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks: [exam-net]
+    restart: unless-stopped
+
+  results-service:
+    build: ./services/results
+    environment:
+      DATABASE_URL: ${DATABASE_URL:-postgresql+psycopg://examuser:local_dev_only_change_me@postgres:5432/examdb}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    expose: ["8002"]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8002/health', timeout=2)"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+    networks: [exam-net]
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: .
+      dockerfile: infra/nginx/Dockerfile
+    ports:
+      - "${HTTP_PORT:-8080}:80"
+    depends_on:
+      quiz-service:
+        condition: service_healthy
+      results-service:
+        condition: service_healthy
+    networks: [exam-net]
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  exam-net:
+    driver: bridge

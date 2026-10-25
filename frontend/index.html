@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="AWS Cloud Practitioner interactive practice exam">
+  <title>CloudReady — AWS Practice Exam</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="runtime-config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CloudReady home"><span class="brand-mark">C</span> CloudReady</a>
+    <div class="top-right"><span class="status-dot"></span><span>Practice environment</span></div>
+  </header>
+  <main class="shell">
+    <section id="home-view" class="hero-view">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> AWS CERTIFICATION PREP</div>
+        <h1>Build confidence.<br><span>Earn your next cloud skill.</span></h1>
+        <p class="hero-sub">Подготовься к AWS Certified Cloud Practitioner с практическими вопросами, разбором ответов и отслеживанием прогресса.</p>
+        <div class="feature-row">
+          <div class="feature"><span class="feature-icon">✓</span><div><b>Practice mode</b><small>Объяснения после ответа</small></div></div>
+          <div class="feature"><span class="feature-icon">◷</span><div><b>Exam simulation</b><small>Таймер и итоговый балл</small></div></div>
+        </div>
+      </div>
+      <aside class="start-card">
+        <div class="card-kicker">YOUR NEXT SESSION</div>
+        <h2>Ready when you are.</h2>
+        <p>Выбери формат и начни тренировку. Результат будет сохранён в истории.</p>
+        <label for="mode">Режим</label>
+        <select id="mode"><option value="practice">Практика — с разбором</option><option value="exam">Экзамен — 90 минут</option></select>
+        <label for="count">Количество вопросов</label>
+        <select id="count"><option value="10">10 вопросов · Быстрая сессия</option><option value="20" selected>20 вопросов · Стандарт</option><option value="30">30 вопросов · Полная тренировка</option></select>
+        <label for="domain">Тема</label>
+        <select id="domain"><option value="">Все темы</option><option value="cloud-technology">Cloud technology</option><option value="security">Security & compliance</option><option value="billing">Billing & pricing</option></select>
+        <button id="start-btn" class="primary-btn">Начать тренировку <span>→</span></button>
+        <div class="card-foot"><span>●</span> 30 оригинальных учебных вопросов</div>
+      </aside>
+      <div class="hero-bottom"><span>LEARN BY DOING</span><span>CLF-C02 · FOUNDATIONAL LEVEL</span></div>
+    </section>
+
+    <section id="exam-view" class="hidden">
+      <div class="exam-head"><div><div class="eyebrow">AWS CLOUD PRACTITIONER</div><h2 id="exam-title">Practice session</h2></div><div class="timer-box"><small>TIME REMAINING</small><strong id="timer">Untimed</strong></div></div>
+      <div class="progress-wrap"><div class="progress-label"><span id="progress-text">Question 1 of 10</span><span id="answered-text">0 answered</span></div><div class="progress-track"><div id="progress-bar"></div></div></div>
+      <div class="exam-layout">
+        <article class="question-card">
+          <div class="question-meta"><span id="question-domain" class="domain-chip">CLOUD TECHNOLOGY</span><button id="flag-btn" class="flag-btn">☆ Mark for review</button></div>
+          <div class="question-number" id="question-number">QUESTION 01</div>
+          <h2 id="question-text">Loading question…</h2>
+          <p class="select-hint">Выбери один правильный ответ.</p>
+          <div id="options" class="options"></div>
+          <div id="practice-feedback" class="feedback hidden"></div>
+          <div class="question-actions"><button id="prev-btn" class="secondary-btn">← Назад</button><button id="next-btn" class="primary-btn">Следующий вопрос →</button></div>
+        </article>
+        <aside class="question-nav-card"><h3>Навигация</h3><p>Нажми на номер, чтобы перейти к вопросу.</p><div id="question-nav" class="question-nav"></div><div class="nav-legend"><span><i class="legend-current"></i> Текущий</span><span><i class="legend-done"></i> Отвечен</span><span><i class="legend-flag"></i> На проверку</span></div><button id="submit-btn" class="submit-btn">Завершить попытку</button></aside>
+      </div>
+    </section>
+
+    <section id="result-view" class="hidden">
+      <div class="result-heading"><div class="eyebrow">SESSION COMPLETE</div><h1 id="result-title">Nice work.</h1><p id="result-subtitle">Review your performance below.</p></div>
+      <div class="result-grid">
+        <div class="score-card"><div class="score-ring" id="score-ring"><div><strong id="score-value">0%</strong><small>YOUR SCORE</small></div></div><h3 id="pass-label">Keep practicing</h3><p id="score-detail">0 of 0 correct</p></div>
+        <div class="stats-card"><div class="stat"><span>Correct answers</span><strong id="correct-stat">0</strong></div><div class="stat"><span>Incorrect answers</span><strong id="incorrect-stat">0</strong></div><div class="stat"><span>Questions answered</span><strong id="answered-stat">0</strong></div><div class="stat"><span>Target score</span><strong>70%</strong></div><button id="retry-btn" class="primary-btn">Пройти ещё раз →</button><button id="history-btn" class="secondary-btn full">История результатов</button></div>
+      </div>
+      <div class="review-section"><div class="review-title"><div><div class="eyebrow">LEARN FROM EVERY ANSWER</div><h2>Разбор вопросов</h2></div><select id="review-filter"><option value="all">Все вопросы</option><option value="incorrect">Ошибки</option><option value="correct">Правильные</option></select></div><div id="review-list"></div></div>
+      <div class="history-section hidden" id="history-section"><h2>История результатов</h2><div id="history-list"></div></div>
+    </section>
+    <footer><span>CloudReady · Educational project</span><span>Independent study tool · Not affiliated with AWS</span></footer>
+  </main>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <div id="confirm-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-card"><h2 id="modal-title">Завершить попытку?</h2><p id="modal-message">После отправки ответы нельзя будет изменить.</p><div class="modal-actions"><button id="cancel-submit" class="secondary-btn">Продолжить</button><button id="confirm-submit" class="primary-btn">Завершить</button></div></div></div>
+</body>
+</html>

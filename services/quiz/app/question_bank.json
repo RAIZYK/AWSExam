@@ -1,0 +1,392 @@
+[
+  {
+    "id": "aws-001",
+    "question": "Which AWS service provides resizable compute capacity in the cloud?",
+    "options": [
+      "Amazon EC2",
+      "Amazon S3",
+      "Amazon Route 53",
+      "AWS Artifact"
+    ],
+    "correct_index": 0,
+    "explanation": "Amazon EC2 provides virtual servers with configurable compute capacity.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-002",
+    "question": "Which AWS service is designed for object storage?",
+    "options": [
+      "Amazon EBS",
+      "Amazon S3",
+      "Amazon RDS",
+      "AWS Lambda"
+    ],
+    "correct_index": 1,
+    "explanation": "Amazon S3 is an object storage service designed for durability and scale.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-003",
+    "question": "Which AWS service runs code in response to events without managing servers?",
+    "options": [
+      "Amazon EC2",
+      "AWS Lambda",
+      "Amazon VPC",
+      "AWS Direct Connect"
+    ],
+    "correct_index": 1,
+    "explanation": "AWS Lambda is a serverless compute service.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-004",
+    "question": "Which service provides managed relational databases?",
+    "options": [
+      "Amazon DynamoDB",
+      "Amazon RDS",
+      "Amazon CloudFront",
+      "AWS IAM"
+    ],
+    "correct_index": 1,
+    "explanation": "Amazon RDS simplifies setup, operation, and scaling of relational databases.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-005",
+    "question": "What is the primary purpose of AWS IAM?",
+    "options": [
+      "Content delivery",
+      "Identity and access management",
+      "DNS registration",
+      "Object lifecycle storage"
+    ],
+    "correct_index": 1,
+    "explanation": "IAM manages users, roles, policies, and permissions.",
+    "domain": "security"
+  },
+  {
+    "id": "aws-006",
+    "question": "Which AWS service is a global content delivery network?",
+    "options": [
+      "Amazon CloudFront",
+      "Amazon EFS",
+      "AWS Config",
+      "Amazon Redshift"
+    ],
+    "correct_index": 0,
+    "explanation": "CloudFront delivers content through a distributed edge network.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-007",
+    "question": "Which AWS service provides DNS domain routing?",
+    "options": [
+      "Amazon Route 53",
+      "AWS Shield",
+      "Amazon Inspector",
+      "Amazon SQS"
+    ],
+    "correct_index": 0,
+    "explanation": "Route 53 is a scalable DNS and domain registration service.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-008",
+    "question": "Which AWS service helps create isolated virtual networks?",
+    "options": [
+      "Amazon VPC",
+      "Amazon S3 Glacier",
+      "AWS Artifact",
+      "AWS Budgets"
+    ],
+    "correct_index": 0,
+    "explanation": "A VPC provides logically isolated networking in AWS.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-009",
+    "question": "Which pricing option can reduce EC2 cost for flexible fault-tolerant workloads?",
+    "options": [
+      "On-Demand only",
+      "Spot Instances",
+      "Dedicated Hosts only",
+      "Capacity Reservations only"
+    ],
+    "correct_index": 1,
+    "explanation": "Spot Instances use spare EC2 capacity at discounts but can be interrupted.",
+    "domain": "billing"
+  },
+  {
+    "id": "aws-010",
+    "question": "Which tool provides recommendations to optimize AWS costs?",
+    "options": [
+      "AWS Cost Explorer",
+      "AWS Shield",
+      "Amazon Inspector",
+      "AWS CloudTrail"
+    ],
+    "correct_index": 0,
+    "explanation": "Cost Explorer visualizes and helps analyze spending and usage.",
+    "domain": "billing"
+  },
+  {
+    "id": "aws-011",
+    "question": "Which AWS service records account activity and API calls for auditing?",
+    "options": [
+      "AWS CloudTrail",
+      "Amazon CloudFront",
+      "Amazon EFS",
+      "AWS Snowball"
+    ],
+    "correct_index": 0,
+    "explanation": "CloudTrail records account activity and API events for governance and audit.",
+    "domain": "security"
+  },
+  {
+    "id": "aws-012",
+    "question": "Which service helps assess resources against configuration rules?",
+    "options": [
+      "AWS Config",
+      "Amazon Polly",
+      "Amazon S3 Transfer Acceleration",
+      "AWS WAF"
+    ],
+    "correct_index": 0,
+    "explanation": "AWS Config tracks resource configurations and evaluates compliance rules.",
+    "domain": "security"
+  },
+  {
+    "id": "aws-013",
+    "question": "What is the AWS shared responsibility model?",
+    "options": [
+      "AWS is responsible for everything",
+      "Customer is responsible for all physical data centers",
+      "AWS secures the cloud; customers secure what they run in the cloud",
+      "It applies only to billing"
+    ],
+    "correct_index": 2,
+    "explanation": "AWS manages security of the cloud; customers manage security in the cloud, with details varying by service.",
+    "domain": "security"
+  },
+  {
+    "id": "aws-014",
+    "question": "Which service helps protect web applications from common web exploits?",
+    "options": [
+      "AWS WAF",
+      "AWS Glue",
+      "Amazon Athena",
+      "AWS Batch"
+    ],
+    "correct_index": 0,
+    "explanation": "AWS WAF can filter HTTP(S) requests using web ACL rules.",
+    "domain": "security"
+  },
+  {
+    "id": "aws-015",
+    "question": "Which AWS service is a managed NoSQL key-value/document database?",
+    "options": [
+      "Amazon RDS",
+      "Amazon DynamoDB",
+      "Amazon Redshift",
+      "Amazon Aurora only"
+    ],
+    "correct_index": 1,
+    "explanation": "DynamoDB is a fully managed NoSQL database.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-016",
+    "question": "Which service is commonly used for decoupling components with a message queue?",
+    "options": [
+      "Amazon SQS",
+      "Amazon Route 53",
+      "AWS KMS",
+      "AWS Organizations"
+    ],
+    "correct_index": 0,
+    "explanation": "SQS is a managed message queuing service.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-017",
+    "question": "Which AWS service provides metrics, logs, and alarms for resources and applications?",
+    "options": [
+      "Amazon CloudWatch",
+      "AWS Artifact",
+      "AWS Marketplace",
+      "Amazon Macie"
+    ],
+    "correct_index": 0,
+    "explanation": "CloudWatch collects monitoring data and supports alarms and dashboards.",
+    "domain": "security"
+  },
+  {
+    "id": "aws-018",
+    "question": "Which AWS service helps manage multiple accounts and apply organization-wide policies?",
+    "options": [
+      "AWS Organizations",
+      "AWS Lambda",
+      "Amazon EBS",
+      "Amazon Lightsail only"
+    ],
+    "correct_index": 0,
+    "explanation": "AWS Organizations centrally manages multiple AWS accounts and supports service control policies.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-019",
+    "question": "Which service can discover and classify sensitive data in Amazon S3?",
+    "options": [
+      "Amazon Macie",
+      "AWS Trusted Advisor",
+      "Amazon EKS",
+      "AWS DMS"
+    ],
+    "correct_index": 0,
+    "explanation": "Amazon Macie uses discovery and classification to help identify sensitive data in S3.",
+    "domain": "security"
+  },
+  {
+    "id": "aws-020",
+    "question": "Which AWS support plan provides access to a designated Technical Account Manager?",
+    "options": [
+      "Basic",
+      "Developer",
+      "Business",
+      "Enterprise Support"
+    ],
+    "correct_index": 3,
+    "explanation": "Enterprise Support includes access to a designated Technical Account Manager.",
+    "domain": "billing"
+  },
+  {
+    "id": "aws-021",
+    "question": "Which tool provides a personalized view of AWS service health and events affecting resources?",
+    "options": [
+      "AWS Health Dashboard",
+      "AWS Artifact",
+      "AWS CloudFormation",
+      "Amazon Kinesis"
+    ],
+    "correct_index": 0,
+    "explanation": "AWS Health provides service health and account-specific event information.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-022",
+    "question": "Which AWS service provides encryption key management?",
+    "options": [
+      "AWS KMS",
+      "Amazon ECR",
+      "AWS Glue",
+      "Amazon SES"
+    ],
+    "correct_index": 0,
+    "explanation": "AWS Key Management Service creates and manages cryptographic keys.",
+    "domain": "security"
+  },
+  {
+    "id": "aws-023",
+    "question": "Which service is designed for data warehousing and analytics?",
+    "options": [
+      "Amazon Redshift",
+      "Amazon SQS",
+      "Amazon Route 53",
+      "AWS IAM Identity Center"
+    ],
+    "correct_index": 0,
+    "explanation": "Amazon Redshift is a cloud data warehouse service.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-024",
+    "question": "What does elasticity mean in cloud computing?",
+    "options": [
+      "Resources can scale up or down with demand",
+      "Servers must always remain the same size",
+      "All resources are purchased upfront",
+      "Only storage can change"
+    ],
+    "correct_index": 0,
+    "explanation": "Elasticity is the ability to match resource capacity to changing demand.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-025",
+    "question": "Which AWS service can assess an architecture against AWS best practices?",
+    "options": [
+      "AWS Well-Architected Tool",
+      "Amazon Polly",
+      "AWS DataSync",
+      "Amazon MQ"
+    ],
+    "correct_index": 0,
+    "explanation": "The Well-Architected Tool helps review workloads against the Well-Architected Framework.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-026",
+    "question": "Which service provides managed Kubernetes?",
+    "options": [
+      "Amazon ECS",
+      "Amazon EKS",
+      "AWS Batch",
+      "AWS App Runner"
+    ],
+    "correct_index": 1,
+    "explanation": "Amazon EKS is AWS's managed Kubernetes service.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-027",
+    "question": "Which service helps estimate the cost of a planned AWS architecture before deployment?",
+    "options": [
+      "AWS Pricing Calculator",
+      "AWS CloudTrail",
+      "Amazon GuardDuty",
+      "AWS Secrets Manager"
+    ],
+    "correct_index": 0,
+    "explanation": "The AWS Pricing Calculator estimates costs for planned AWS use cases.",
+    "domain": "billing"
+  },
+  {
+    "id": "aws-028",
+    "question": "Which service helps detect potentially malicious activity using threat detection findings?",
+    "options": [
+      "Amazon GuardDuty",
+      "AWS Artifact",
+      "AWS Snowcone",
+      "Amazon EFS"
+    ],
+    "correct_index": 0,
+    "explanation": "GuardDuty analyzes relevant data sources to identify potential threats.",
+    "domain": "security"
+  },
+  {
+    "id": "aws-029",
+    "question": "Which storage service provides block storage volumes for EC2?",
+    "options": [
+      "Amazon EBS",
+      "Amazon S3",
+      "Amazon SQS",
+      "Amazon CloudFront"
+    ],
+    "correct_index": 0,
+    "explanation": "EBS provides persistent block storage volumes for EC2 instances.",
+    "domain": "cloud-technology"
+  },
+  {
+    "id": "aws-030",
+    "question": "Which AWS service provides a private dedicated network connection from an organization to AWS?",
+    "options": [
+      "AWS Direct Connect",
+      "Amazon CloudFront",
+      "AWS WAF",
+      "Amazon SNS"
+    ],
+    "correct_index": 0,
+    "explanation": "Direct Connect establishes a dedicated network connection to AWS.",
+    "domain": "cloud-technology"
+  }
+]

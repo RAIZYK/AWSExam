@@ -1,0 +1,7 @@
+.env
+__pycache__/
+.pytest_cache/
+.venv/
+dist/
+frontend/runtime-config.js
+*.pyc
